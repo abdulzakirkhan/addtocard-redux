@@ -37,8 +37,8 @@ function Home() {
                 </Nav.Link>
               </Nav>
               <Form className="d-flex">
-                <Badge color="secondary" badgeContent={1000} max={999}>
-                  <ShoppingCartIcon style={{color:"#FFFFFF",fontSize:"36px"}} />
+                <Badge color="secondary" badgeContent={1} max={10}>
+                    <ShoppingCartIcon className="ShoppingCartIcon" />
                 </Badge>
               </Form>
             </Navbar.Collapse>
