@@ -1,5 +1,5 @@
 // combining all reducers
-import { combineReducers } from "react-redux";
+import { combineReducers } from "redux";
 import cartItems from "./reducers";
 
 

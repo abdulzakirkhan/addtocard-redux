@@ -7,10 +7,9 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 console.log(cardsData);
-function Home() {
-  const handleAddToCart = (id) => {
-    console.log(id);
-  };
+function Home(props) {
+
+
   return (
     <Fragment>
       <header>
@@ -71,7 +70,7 @@ function Home() {
                 <Card.Footer>
                   <Button
                     variant="success"
-                    onClick={() => handleAddToCart(product.id)}
+                    onClick={() => props.addToCartHandler({name:product.itemName,price:product.newPrice})}
                   >
                     Add To Cart
                   </Button>
