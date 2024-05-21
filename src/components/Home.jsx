@@ -6,10 +6,10 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-console.log(cardsData);
+import { useNavigate } from "react-router-dom";
 function Home(props) {
-
-
+  // const navigate =useNavigate();
+  console.log("Home",props)
   return (
     <Fragment>
       <header>
@@ -36,8 +36,8 @@ function Home(props) {
                 </Nav.Link>
               </Nav>
               <Form className="d-flex">
-                <Badge color="secondary" badgeContent={1} max={10}>
-                    <ShoppingCartIcon className="ShoppingCartIcon" />
+                <Badge color="secondary" badgeContent={props.cardData.length} max={100}>
+                    <ShoppingCartIcon className="ShoppingCartIcon"/>
                 </Badge>
               </Form>
             </Navbar.Collapse>
